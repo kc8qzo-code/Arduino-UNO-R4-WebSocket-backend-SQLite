@@ -18,12 +18,8 @@ public class SensorReadingService {
     private final SensorReadingRepository sensorReadingRepository;
     private final ModelMapper mapper;
 
-    public SensorReadingService(SensorReadingRepository sensorReadingRepository) {
-        this.sensorReadingRepository = sensorReadingRepository;
-    }
-
     @Transactional
-    public SensorReadingDTO save(SensorReadingDTO sensorReadingDTO) {
+    public SensorReadingDTO receiveSensorReading(SensorReadingDTO sensorReadingDTO) {
         if (sensorReadingDTO.getPostedAt() == null) {
             sensorReadingDTO.setPostedAt(Instant.now(clock));
         }
