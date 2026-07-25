@@ -27,4 +27,11 @@ public class SensorReadingService {
         SensorReading savedReading = sensorReadingRepository.save(entity);
         return mapper.map(savedReading, SensorReadingDTO.class);
     }
+
+    @Transactional(readOnly = true)
+    public SensorReadingDTO readSensorReading() {
+        return sensorReadingRepository.findFirstByOrderByIdDesc()
+                .map(sensorReading -> mapper.map(sensorReading, SensorReadingDTO.class))
+                .orElse(null);
+    }
 }

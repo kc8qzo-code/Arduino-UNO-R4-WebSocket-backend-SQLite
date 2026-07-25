@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: arduinows
+  datasource:
+    url: jdbc:sqlite:ArduinoTestDB.db
+    driver-class-name: org.sqlite.JDBC
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl

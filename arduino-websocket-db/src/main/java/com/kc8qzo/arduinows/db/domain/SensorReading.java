@@ -19,32 +19,35 @@ import java.time.Instant;
 @Table(name = "arduino_sensor")
 public class SensorReading {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) // ✓ works in SQLite
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // works in SQLite
+	@Column(name = "id")
 	private Long id;
 
-	@Column
+	@Column(name = "temperature")
 	private double temperature;
 
-	@Column
+	@Column(name = "humidity")
 	private double humidity;
 
-	@Column
+	@Column(name = "light")
 	private Integer light;
 
 	public Integer getMyInteger() {
+
 		return light;
 	}
 
 	public void setMyInteger(Integer light) {
+
 		this.light = light;
 	}
 
-	@Column
+	@Column(name = "pass_value")
 	private long passValue;
 
-	@Column
+	@Column(name = "sent_at")
 	private Instant sentAt;
 
-	@Column(nullable = false)
+	@Column(name = "posted_at", nullable = false)
 	private Instant postedAt;
 }
