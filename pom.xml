@@ -18,6 +18,7 @@
     <modules>
         <module>arduino-websocket-contracts</module>
         <module>arduino-websocket-db</module>
+        <module>arduino-websocket-services</module>
         <module>arduino-websocket-endpoints</module>
     </modules>
 

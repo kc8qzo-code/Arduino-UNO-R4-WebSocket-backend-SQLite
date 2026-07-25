@@ -15,7 +15,12 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.kc8qzo</groupId>
-			<artifactId>arduino-websocket-db</artifactId>
+			<artifactId>arduino-websocket-contracts</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.kc8qzo</groupId>
+			<artifactId>arduino-websocket-services</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
