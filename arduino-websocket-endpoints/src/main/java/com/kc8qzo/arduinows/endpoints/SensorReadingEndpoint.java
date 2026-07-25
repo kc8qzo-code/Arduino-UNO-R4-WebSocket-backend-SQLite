@@ -18,4 +18,10 @@ public class SensorReadingEndpoint {
     public SensorReadingDTO createSensorReading(SensorReadingDTO sensorReadingDTO) {
         return sensorReadingService.receiveSensorReading(sensorReadingDTO);
     }
+
+    @MessageMapping("/read-sensor-reading")
+    @SendTo("/topic/read-sensor-reading")
+    public SensorReadingDTO readSensorReading() {
+        return sensorReadingService.readSensorReading();
+    }
 }
