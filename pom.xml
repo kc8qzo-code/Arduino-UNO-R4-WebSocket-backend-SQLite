@@ -16,6 +16,7 @@
     <description>Arduino WebSocket backend</description>
 
     <modules>
+        <module>arduino-websocket-contracts</module>
         <module>arduino-websocket-db</module>
         <module>arduino-websocket-endpoints</module>
     </modules>
